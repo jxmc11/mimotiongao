@@ -379,7 +379,7 @@ if __name__ == "__main__":
     # 登录密码
     passwd = sys.argv[4]
     # 要修改的步数，直接输入想要修改的步数值，0为随机步数
-    step = '24000-25000'
+    step = '26000-35000'
 
     user_list = user.split('#')
     passwd_list = passwd.split('#')
