@@ -377,8 +377,10 @@ if __name__ == "__main__":
 
     # 用户名（格式为 13800138000）
     user = sys.argv[3]
+    print(user)
     # 登录密码
     passwd = sys.argv[4]
+    print(passwd)
     # 要修改的步数，直接输入想要修改的步数值，0为随机步数
     step = sys.argv[5].replace('[', '').replace(']', '')
 
