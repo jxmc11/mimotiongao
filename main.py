@@ -80,7 +80,6 @@ def main(_user, _passwd, _step):
     _user = str(_user)
     password = str(_passwd)
     _step = str(_step)
-    print(_user,_passwd, _step)
     if _user == '' or password == '':
         print("用户名或密码不能为空！")
         return "user and passwd not empty！"
@@ -377,17 +376,17 @@ if __name__ == "__main__":
 
     # 用户名（格式为 13800138000）
     user = sys.argv[3]
-    print(user)
+
     # 登录密码
     passwd = sys.argv[4]
-    print(passwd)
+    
     # 要修改的步数，直接输入想要修改的步数值，0为随机步数
     step = sys.argv[5].replace('[', '').replace(']', '')
 
     user_list = user.split('#')
-    print(user_list)
+    
     passwd_list = passwd.split('#')
-    print(passwd_list)
+    
     setp_array = step.split('-')
 
     if len(user_list) == len(passwd_list):
@@ -399,7 +398,7 @@ if __name__ == "__main__":
             elif str(step) == '0':
                 step = ''
             push_msg += main(user, passwd, step) + '\n'
-        print(push_msg)
+        
         push = {
             'wx': to_push.to_push_wx,
             'nwx': to_push.to_push_server,
