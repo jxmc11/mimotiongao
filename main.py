@@ -42,7 +42,6 @@ def login(_user, password):
         "redirect_uri": "https://s3-us-west-2.amazonaws.com/hm-registration/successsignin.html",
         "token": "access"
     }
-    print('账户信息:', _user, password)
     r1 = requests.post(url1, data=data1, headers=_headers, allow_redirects=False)
     try:
         location = r1.headers["Location"]
@@ -78,6 +77,7 @@ def main(_user, _passwd, _step):
     """
     主函数
     """
+    print(_user,_passwd)
     _user = str(_user)
     password = str(_passwd)
     _step = str(_step)
@@ -383,7 +383,9 @@ if __name__ == "__main__":
     step = sys.argv[5].replace('[', '').replace(']', '')
 
     user_list = user.split('#')
+    print(user_list)
     passwd_list = passwd.split('#')
+    print(passwd_list)
     setp_array = step.split('-')
 
     if len(user_list) == len(passwd_list):
