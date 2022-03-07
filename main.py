@@ -77,10 +77,10 @@ def main(_user, _passwd, _step):
     """
     主函数
     """
-    print(_user,_passwd)
     _user = str(_user)
     password = str(_passwd)
     _step = str(_step)
+    print(_user,_passwd, _step)
     if _user == '' or password == '':
         print("用户名或密码不能为空！")
         return "user and passwd not empty！"
@@ -399,7 +399,7 @@ if __name__ == "__main__":
             elif str(step) == '0':
                 step = ''
             push_msg += main(user, passwd, step) + '\n'
-
+        print(push_msg)
         push = {
             'wx': to_push.to_push_wx,
             'nwx': to_push.to_push_server,
