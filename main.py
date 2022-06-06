@@ -85,8 +85,8 @@ def main(_user, _passwd, _step):
         return "user and passwd not empty！"
 
     if _step == '':
-        print("已设置为随机步数（10000-19999）")
-        _step = str(random.randint(10000, 19999))
+        print("已设置为随机步数（11000-19999）")
+        _step = str(random.randint(11000, 19999))
     login_token, userid = login(_user, password)
     if login_token == 0:
         print("登陆失败！")
@@ -397,9 +397,9 @@ if __name__ == "__main__":
                 print(f"已设置为随机步数（{setp_array[0]}-{setp_array[1]}）")
             elif str(step) == '0':
                 step = ''
-            print(user)
-            print(passwd)
-            print(step)
+            print('user' + user)
+            print('passwd' + passwd)
+            print('step' + step)
             push_msg += main(user, passwd, step) + '\n'
         
         push = {
